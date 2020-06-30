@@ -1,8 +1,8 @@
-package com.example.homecredittest.fakerepo
+package com.example.homecredittest.testrepo
 
 import com.example.homecredittest.api.models.*
 
-class FakeWeatherRepositoryImp {
+class TestWeatherRepositoryImp {
 
     private val list:List<WeatherResponseListModel>  = listOf(
         WeatherResponseListModel(
