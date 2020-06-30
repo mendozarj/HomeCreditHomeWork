@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 class GroupViewModel @Inject constructor(
     @ApiRepo private val weatherRepository: WeatherRepository,
-    val networkHelper: NetworkHelper
+    private val networkHelper: NetworkHelper
 ) : ViewModel() {
 
     private var _groupOfWeather = MutableLiveData<WeatherResponseModel>()
