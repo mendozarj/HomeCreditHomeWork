@@ -1,5 +1,6 @@
 package com.example.homecredittest.viewmodels
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,7 +15,7 @@ import kotlinx.coroutines.launch
 import java.lang.Exception
 import javax.inject.Inject
 
-class GroupViewModel @Inject constructor(
+class GroupViewModel @ViewModelInject constructor(
     @ApiRepo private val weatherRepository: WeatherRepository,
     private val networkHelper: NetworkHelper
 ) : ViewModel() {

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.homecredittest.R
@@ -28,7 +29,7 @@ import javax.inject.Inject
 class FirstFragment : Fragment() {
 
     private lateinit var binding: FragmentFirstBinding
-    @Inject lateinit var groupViewModel: GroupViewModel
+    private val groupViewModel: GroupViewModel by viewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
