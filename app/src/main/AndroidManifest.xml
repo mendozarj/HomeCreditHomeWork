@@ -14,10 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <service
-            android:exported="false"
-            android:name="com.novoda.merlin.MerlinService" />
-
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name"

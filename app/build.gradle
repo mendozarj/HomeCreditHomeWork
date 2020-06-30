@@ -83,9 +83,6 @@ dependencies {
     kaptTest 'com.google.dagger:hilt-android-compiler:2.28-alpha'
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    // Observes the Internet Connection Status
-    implementation 'com.novoda:merlin:1.2.0'
-
     testImplementation "org.robolectric:robolectric:4.0.2"
 
     // Testing dependencies
