@@ -45,7 +45,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
@@ -62,227 +62,233 @@
                 android:layout_height="match_parent"
                 tools:layout_editor_absoluteX="16dp">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/parentLinear"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/manila"
+                        android:id="@+id/parentLinear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:padding="10dp"
-                        android:background="@drawable/round_white"
+                        android:visibility="gone"
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/manila"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:weightSum="2"
-                            android:orientation="horizontal">
+                            android:layout_margin="8dp"
+                            android:padding="10dp"
+                            android:background="@drawable/round_white"
+                            android:orientation="vertical">
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/manilaDegree"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1.6"
-                                android:gravity="center_vertical"
-                                android:text="@{weather.manilaTemp, default=`4.0\u2103`}"
-                                android:textSize="18sp"
-                                android:textColor="@android:color/black"/>
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/manilaFav"
-                                android:visibility="invisible"
-                                android:layout_width="0dp"
-                                android:layout_height="34dp"
-                                android:layout_weight="0.4"
-                                app:tint="@android:color/black"
-                                android:src="@drawable/ic_favorite_24"
-                                android:adjustViewBounds="true"/>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"/>
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{weather.manilaName, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="25sp"/>
+                                android:gravity="center_vertical"
+                                android:weightSum="2"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/manilaDegree"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center_vertical"
+                                    android:text="@{weather.manilaTemp, default=`4.0\u2103`}"
+                                    android:textSize="18sp"
+                                    android:textColor="@android:color/black"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/manilaFav"
+                                    android:visibility="invisible"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:layout_weight="0.4"
+                                    app:tint="@android:color/black"
+                                    android:src="@drawable/ic_favorite_24"
+                                    android:adjustViewBounds="true"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
 
                             <View
-                                android:layout_width="20dp"
-                                android:layout_height="0dp"/>
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"/>
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/manilaState"
-                                android:layout_width="wrap_content"
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{weather.manilaState, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="18sp"/>
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.manilaName, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="25sp"/>
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/manilaState"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.manilaState, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/prague"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="10dp"
+                            android:background="@drawable/round_white"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:weightSum="2"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/pragueDegree"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center_vertical"
+                                    android:text="@{weather.pragueTemp, default=`4.0\u2103`}"
+                                    android:textSize="18sp"
+                                    android:textColor="@android:color/black"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/pragueFav"
+                                    android:visibility="invisible"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:layout_weight="0.4"
+                                    app:tint="@android:color/black"
+                                    android:src="@drawable/ic_favorite_24"
+                                    android:adjustViewBounds="true"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.pragueName, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="25sp"/>
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/pragueState"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.pragueState, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/seoul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:padding="10dp"
+                            android:background="@drawable/round_white"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:weightSum="2"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/seoulDegree"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6"
+                                    android:gravity="center_vertical"
+                                    android:text="@{weather.koreaTemp, default=`4.0\u2103`}"
+                                    android:textSize="18sp"
+                                    android:textColor="@android:color/black"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/seoulFav"
+                                    android:visibility="invisible"
+                                    android:layout_width="0dp"
+                                    android:layout_height="34dp"
+                                    android:layout_weight="0.4"
+                                    app:tint="@android:color/black"
+                                    android:src="@drawable/ic_favorite_24"
+                                    android:adjustViewBounds="true"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.koreaName, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="25sp"/>
+
+                                <View
+                                    android:layout_width="20dp"
+                                    android:layout_height="0dp"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/seoulState"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{weather.koreaState, default=`NaN`}"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="18sp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/prague"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:padding="10dp"
-                        android:background="@drawable/round_white"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:weightSum="2"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/pragueDegree"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1.6"
-                                android:gravity="center_vertical"
-                                android:text="@{weather.pragueTemp, default=`4.0\u2103`}"
-                                android:textSize="18sp"
-                                android:textColor="@android:color/black"/>
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/pragueFav"
-                                android:visibility="invisible"
-                                android:layout_width="0dp"
-                                android:layout_height="34dp"
-                                android:layout_weight="0.4"
-                                app:tint="@android:color/black"
-                                android:src="@drawable/ic_favorite_24"
-                                android:adjustViewBounds="true"/>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"/>
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@{weather.pragueName, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="25sp"/>
-
-                            <View
-                                android:layout_width="20dp"
-                                android:layout_height="0dp"/>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/pragueState"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@{weather.pragueState, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="18sp"/>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:id="@+id/seoul"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:padding="10dp"
-                        android:background="@drawable/round_white"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:weightSum="2"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/seoulDegree"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1.6"
-                                android:gravity="center_vertical"
-                                android:text="@{weather.koreaTemp, default=`4.0\u2103`}"
-                                android:textSize="18sp"
-                                android:textColor="@android:color/black"/>
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/seoulFav"
-                                android:visibility="invisible"
-                                android:layout_width="0dp"
-                                android:layout_height="34dp"
-                                android:layout_weight="0.4"
-                                app:tint="@android:color/black"
-                                android:src="@drawable/ic_favorite_24"
-                                android:adjustViewBounds="true"/>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="10dp"/>
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@{weather.koreaName, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="25sp"/>
-
-                            <View
-                                android:layout_width="20dp"
-                                android:layout_height="0dp"/>
-
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/seoulState"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@{weather.koreaState, default=`NaN`}"
-                                android:textColor="@android:color/black"
-                                android:textSize="18sp"/>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                </ScrollView>
 
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
