@@ -24,8 +24,8 @@ object ApiModule {
     @Provides
     fun providesWeatherApi(): Retrofit {
         val okHttpClient = OkHttpClient.Builder()
-        okHttpClient.readTimeout(10, TimeUnit.SECONDS)
-        okHttpClient.connectTimeout(10, TimeUnit.SECONDS)
+        okHttpClient.readTimeout(5000, TimeUnit.MILLISECONDS)
+        okHttpClient.connectTimeout(5000, TimeUnit.MILLISECONDS)
         okHttpClient.build()
 
         val client: OkHttpClient = okHttpClient.build()
